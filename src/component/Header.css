@@ -1,0 +1,172 @@
+header{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .logo{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    font-weight: 800;
+    font-size: 28px;
+    font-family: "vidaloka";
+  }
+  nav{
+    text-align: right;
+  }
+  nav ul{
+    list-style: none;
+    margin: 0%;
+    padding:0%;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    padding: 5px;
+  }
+  
+  nav a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  
+  }
+  
+  nav a:hover {
+    color: #666; 
+    transition: color 0.2s ease;
+  }
+  
+  .header-button{
+    margin-left:88%;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .header-button:hover {
+    background-color: #ccc; 
+    transition: background-color 0.2s ease;
+  }
+  
+ /* Add these to your existing CSS */
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    z-index: 999;
+    padding: 2rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-nav {
+    margin-top: 2rem;
+}
+
+.sidebar-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar-nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Optional: Add animation */
+.sidebar {
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        margin-left: 0.5rem;
+        left: 20px;
+    }
+
+    nav {
+        display: block; /* Make sure nav is visible */
+        text-align: left;
+    }
+
+    nav ul {
+        display: none;
+        gap: 1rem;
+    }
+
+    .header-button {
+        margin-left: 50%;
+        display: flex;
+    }
+
+    /* Sidebar styling for mobile */
+    .sidebar {
+        width: 55%;
+        padding: 1.5rem;
+    }
+
+    .sidebar-nav ul {
+        gap: 1rem;
+    }
+
+    .sidebar-nav ul li a {
+        font-size: 1rem;
+    }
+}

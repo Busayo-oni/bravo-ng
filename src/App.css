@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.popular{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  padding: 30px 10px;
+}
+@media screen and (max-width:767px){
+  .popular{
+    grid-template-columns:1fr;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 10px;
+  }
+}
