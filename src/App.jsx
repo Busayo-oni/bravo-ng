@@ -16,7 +16,7 @@ import Popular from './component/Popular'
 function App() {
 
   return (
-    <>
+    <div className='mx-auto '>
       <Header />
       <Hero />
       <Popular />
@@ -25,7 +25,7 @@ function App() {
       <Sea />
       <Exclusive />
       <Footer />
-    </>
+    </div>
   )
 }
 
