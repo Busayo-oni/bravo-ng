@@ -1,7 +1,7 @@
 import React from 'react'
 import Blue from '../assets/blue.png'
 import Pink from '../assets/pink.png'
-import '../app.css'
+import '../App.css'
 
 const Popular = () => {
   return (
